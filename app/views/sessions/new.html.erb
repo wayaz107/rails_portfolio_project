@@ -1,0 +1,8 @@
+<div class="start-pages signup-login">
+<br>
+  <h4 class="blue-bold">Log In to Restaurant Review</h4><br>
+<%= form_for :user do |f| %>
+    <%= f.email_field :email, placeholder: "Email", :size => 30 %>
+    <%= f.password_field :password, placeholder: "Password", :size => 30 %><br><br>
+    <%= f.submit "Continue with Email", :class => 'btn btn-block btn-success' %><br>
+  <% end %>
