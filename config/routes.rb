@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  root 'welcome#home'
+
   resources :cuisines
   resources :cities
   resources :restaurants
