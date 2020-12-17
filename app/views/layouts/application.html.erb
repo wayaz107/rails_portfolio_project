@@ -14,15 +14,14 @@
     </head>
 
     <body>
+    
 
     <div class="topnav">
       <%= render '/layouts/header' %>
     </div>
 
-    <% flash.each do |key, value| %>
-      <div class="<%= flash_class(key) %>">
-            <%= value %>
-      </div>
+    <% flash.each do |name, msg| -%>
+      <strong><%= content_tag :div, msg, class: name %></strong>
     <% end %>
 
     <%= yield %>

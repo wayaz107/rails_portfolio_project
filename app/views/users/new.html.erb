@@ -10,6 +10,22 @@
       <%= f.submit "Create Account", :class => 'btn btn-block btn-success' %>
     <% end %>
 
+    <div class="user-errors">
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+          <p><%= pluralize(@user.errors.count, "error") %> prohibited this account from being created:</p>
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+
+</div>
+
+
     <p>Already have an account with us?</p>
 
 <p>Please login below</p><br>
