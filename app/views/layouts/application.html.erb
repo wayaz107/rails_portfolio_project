@@ -14,11 +14,13 @@
     </head>
 
     <body>
-    
+
 
     <div class="topnav">
       <%= render '/layouts/header' %>
     </div>
+   <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
     <% flash.each do |name, msg| -%>
       <strong><%= content_tag :div, msg, class: name %></strong>

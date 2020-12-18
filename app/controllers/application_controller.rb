@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     include ApplicationHelper
-    before_action :redirect_if_not_logged_in 
+    # before_action :redirect_if_not_logged_in 
     helper_method :current_user, :logged_in?, :authorized_to_edit?
 
     def logged_in?
@@ -20,5 +20,6 @@ class ApplicationController < ActionController::Base
             flash[:error] = "You must be logged in to view this page."
             redirect_to login_path
       end
+    end 
 
 end
