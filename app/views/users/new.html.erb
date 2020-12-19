@@ -1,33 +1,13 @@
 <div class="start-pages signup-login">
 <br>
-  <h4 class="blue-bold">Sign Up for RestaurantReview!</h4><br>
-    <%= form_for @user do |f| %>
-      
+  <h4 class="blue-bold">Create an Account</h4><br>
+   
+  <%= form_for @user do |f| %>
       <%= f.text_field :name, placeholder: "Name", :size => 30 %>
       <%= f.text_field :username, placeholder: "Username", :size => 30 %>
-      <%= f.text_field :email, placeholder: "Email", :size => 30 %>
+      <%= f.email_field :email, placeholder: "Email", :size => 30 %>
       <%= f.password_field :password, placeholder: "Password", :size => 30 %><br><br>
       <%= f.submit "Create Account", :class => 'btn btn-block btn-success' %>
     <% end %>
-
-    <div class="user-errors">
-    <% if @user.errors.any? %>
-      <div id="error_explanation">
-          <p><%= pluralize(@user.errors.count, "error") %> prohibited this account from being created:</p>
-        <ul>
-          <% @user.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-  </div>
-
 </div>
 
-
-    <p>Already have an account with us?</p>
-
-<p>Please login below</p><br>
-
-<div><%= link_to "Login", login_path, class: "btn btn-primary" %></div><br>
