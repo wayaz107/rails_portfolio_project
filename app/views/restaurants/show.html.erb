@@ -1,13 +1,10 @@
-Restaurant name: <h1><%= @restaurant.name%>  </h1>
-Restaurant address: <h2><%= @restaurant.address%>  </h1>
+Restaurant name: <h1> <%= @restaurant.name %>  </h1>
+Restaurant address: <h2> <%= @restaurant.address %>  </h1>
+<br>
 
- Cuisine: <h2><%= @restaurant.cuisine_name %> </h2>
- City name:<h2><%= @restaurant.city_name %> </h2>
-<div>
-  <p>Price range: <%= @restaurant.price_range %></p>
-</div>
-
+<% @restaurant.each do |restaurant| %>
+  <%= link_to restaurant.name, restaurant_path(restaurant) %></p>
+<% end %>
 
 
-
-<br></br>
+<br>

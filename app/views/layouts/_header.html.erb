@@ -4,6 +4,7 @@
   <%= link_to("Sign Up", signup_path) %>
 <% else %>
   <%= link_to("My Reviews", user_reviews_path(current_user)) %>
+  <%= link_to("Restaurants", restaurants_path) %>
   <%= link_to("Cuisines", cuisines_path) %>
   <%= link_to("Cities", cities_path) %>
   <%= link_to("Reviewers", users_path) %>
