@@ -2,6 +2,9 @@ Restaurant name: <h1> <%= @restaurant.name %>  </h1>
 Restaurant address: <h2> <%= @restaurant.address %>  </h1>
 <br>
 
-
+<% @restaurant.reviews.each do |review| %>
+  <%= review.comment %>
+  <p>- <%= review.user.name %></p>
+<% end %>
 
 <br>
