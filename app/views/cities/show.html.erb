@@ -1,5 +1,21 @@
 <h1><%= @city.name %></h1>
 
+<table>
+<thead>
+<tr>
+<th>Restaurant</th>
+<th>Total Reviews</th>
+<th>Average Rating</th>
+<th>Cuisine</th>
+</tr>
+</thead>
+<tbody>
 <% @city.restaurants.each do |restaurant| %>
-    <%= link_to restaurant.name, restaurant_path(restaurant) %></p>
-  <% end %>
+<td style="padding:0 15px 0 15px;"><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
+<td style="padding:0 15px 0 15px;"><%= restaurant.reviews.count %></td>
+<td style="padding:0 15px 0 15px;"><%= restaurant.average_rating %></td>
+<td style="padding:0 15px 0 15px;"><%= restaurant.cuisine.name %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
