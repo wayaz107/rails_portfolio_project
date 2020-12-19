@@ -9,16 +9,9 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
-  resources :restaurants, only: [:new, :create, :destroy]
-  
-  resources :cities, only: [:show] do
-    resources :cuisines, only: [:show]
-  end
-
-  resources :restaurants, only: [:show] do
-    resources :reviews, only: [:new, :create]
-  end
-  
+  resources :restaurants
+  resources :cities
+  resources :cuisines
   resources :reviews
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
