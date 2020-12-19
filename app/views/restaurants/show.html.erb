@@ -1,10 +1,12 @@
 Restaurant name: <h1> <%= @restaurant.name %>  </h1>
-Restaurant address: <h2> <%= @restaurant.address %>  </h1>
+ Address: <h2> <%= @restaurant.address %>  </h1>
+ Price range: <h2> <%= @restaurant.price_range %>  </h1>
+
 <br>
 
 <% @restaurant.reviews.each do |review| %>
-  <%= review.comment %>
-  <p>- <%= review.user.name %></p>
+  <%= review.user.name %>: <%= review.comment %>
+  <p>Rating: <%= review.rating %>/5</p>
 <% end %>
 
 <br>

@@ -6,18 +6,30 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.create(name: "Hamza", username: "Hamza1", email: "hamza1@gmail.com", password: "1234") 
-# cuisine1 = Cuisine.create(name: "Chinese") 
-# city1 = City.create(name: "Milwaukee")
-#  restaurant1 = Restaurant.create(name: "P.F. Chang's", price_range: "$$", address: "2500 N Mayfair Rd, Milwaukee, WI 53226", city_id: city1.id, cuisine_id: cuisine1.id)
-#  review1 = Review.create(rating: "4", content: "100% recommend!", restaurant_id: restaurant1.id, user_id: user1.id) 
+ User.create(name: "Hamza", username: "Hamza1", email: "hamza1@gmail.com", password: "password") 
+ User.create(name: "Warda", username: "wayaz01", email: "wayaz01@gmail.com", password: "password") 
+ User.create(name: "Anum", username: "Anum1", email: "anum@gmail.com", password: "password") 
 
-cities = City.create([{name: 'Los Angeles'}, {name: 'New York City'}, {name: 'Barcelona'}, {name: 'Paris'}, {name: 'Tokyo'}, {name: 'Hong Kong'}, {name: 'Mexico City'}])
-cuisines = Cuisine.create([{name: 'Japanese'}, {name: 'Chinese'}, {name: 'Korean'}, {name: 'Italian'}, {name: 'French'}, {name: 'New American'}, {name: 'Mexican'}, {name: 'Fast Food'}, {name: 'Tapas'}, {name: 'Cantonese'}])
 
-restaurants = Restaurant.create([
-    {name: 'Cal Mare', price_range: '$$$', city_id: City.find_by(name: 'Los Angeles').id , cuisine_id: Cuisine.find_by(name: 'Italian').id},
-    {name: 'In-N-Out', price_range: '$', city_id: City.find_by(name: 'Los Angeles').id , cuisine_id: Cuisine.find_by(name: 'Fast Food').id},
-    {name: 'Guisados', price_range: '$', city_id: City.find_by(name: 'Los Angeles').id , cuisine_id: Cuisine.find_by(name: 'Mexican').id},
-    {name: 'Inko Nito', price_range: '$$', city_id: City.find_by(name: 'Los Angeles').id , cuisine_id: Cuisine.find_by(name: 'Japanese').id},
-    {name: 'Katz\'s Delicatessen', price_range: '$$', city_id: City.find_by(name: 'New York City').id , cuisine_id: Cuisine.find_by(name: 'Fast Food').id}])
+ Cuisine.create(name: "Chinese")  #1
+ Cuisine.create(name: "Indian") #2
+ Cuisine.create(name: "Italian") #3
+ Cuisine.create(name: "Middle Eastern")  #4
+ Cuisine.create(name: "Mexican") #5
+ Cuisine.create(name: "American") #6
+ Cuisine.create(name: "Other")
+
+ City.create(name: "Milwaukee")
+ City.create(name: "Chicago")
+ City.create(name: "San Diego")
+ City.create(name: "Orlando")
+
+
+ Restaurant.create(name: "Anmol", address: "711 W Historic Mitchell St, Milwaukee, WI 53204", price_range: "$$", cuisine_id: 2, city_id: 1)
+ Restaurant.create(name: "Ghareeb Nawaz Restaurant", address: "2032 W Devon Ave, Chicago, IL 60659", price_range: "$", cuisine_id: 2, city_id: 2)
+ Restaurant.create(name: "Chopstix", address: "1820 N Farwell Ave, Milwaukee, WI 53202", price_range: "$", cuisine_id: 1, city_id: 1)
+ Restaurant.create(name: "Bencotto", address: "750 W Fir St #103, San Diego, CA 92101", price_range: "$$$", cuisine_id: 3, city_id: 3)
+
+ Review.create(user_id: 1, restaurant_id: 1, rating: 5, content: "Loved it. Food was delicious")
+ Review.create(user_id: 2, restaurant_id: 2, rating: 3, content: "The price was not worth the food.")
+ 
