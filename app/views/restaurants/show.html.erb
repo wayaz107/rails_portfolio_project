@@ -1,6 +1,9 @@
 Restaurant name: <h1> <%= @restaurant.name %>  </h1>
- Address: <h2> <%= @restaurant.address %>  </h1>
+<h3>Cuisine: <%= @restaurant.cuisine.name %>
+<br>
+ Address: <h2> <%= @restaurant.address %>  </h2>
  Price range: <h2> <%= @restaurant.price_range %>  </h1>
+ <h3>City: <%= @restaurant.city.name %>
 
 <br>
 
@@ -9,7 +12,7 @@ Restaurant name: <h1> <%= @restaurant.name %>  </h1>
 <br>
 
 <% @restaurant.reviews.each do |review| %>
-  <%= review.user.name %>
+  <b><%= review.user.name %></b>
   <p>Rating: <%= review.rating %>/5</p>
   <%= review.comment %>
 <% end %>
