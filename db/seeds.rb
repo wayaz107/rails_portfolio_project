@@ -32,4 +32,5 @@
 
  Review.create(user_id: 1, restaurant_id: 1, rating: 5, content: "Loved it. Food was delicious")
  Review.create(user_id: 2, restaurant_id: 2, rating: 3, content: "The price was not worth the food.")
- 
+
+ Review.create(user_id: 1, restaurant_id: 2, rating: 4, content: "Food and ambiance was great. Didn't give a complete 5 stars because the food took a while.")

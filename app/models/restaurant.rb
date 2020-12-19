@@ -4,6 +4,14 @@ class Restaurant < ApplicationRecord
     belongs_to :city
     belongs_to :cuisine
     
+    def average_rating
+        if self.reviews.count == 0
+          "No reviews."
+        else
+          self.reviews.average(:rating).to_f.round(2)
+        end
+    end
+    	
 end 
   
    
