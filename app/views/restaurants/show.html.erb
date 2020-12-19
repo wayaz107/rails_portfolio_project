@@ -2,9 +2,6 @@ Restaurant name: <h1> <%= @restaurant.name %>  </h1>
 Restaurant address: <h2> <%= @restaurant.address %>  </h1>
 <br>
 
-<% @restaurant.each do |restaurant| %>
-  <%= link_to restaurant.name, restaurant_path(restaurant) %></p>
-<% end %>
 
 
 <br>
