@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
             redirect_to login_path, :flash => { :error => "Please enter all fields."}
         elsif @user && @user.try(:authenticate, params[:user][:password])
             session[:user_id] = @user.id
-            redirect_to user_path(@user)
+            redirect_to user_reviews_path(@user)
         else
             redirect_to login_path, :flash => { :error => "Incorrect username/password. Please try again."}
         end 
