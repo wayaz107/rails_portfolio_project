@@ -6,7 +6,7 @@ class Restaurant < ApplicationRecord
     
     def average_rating
         if self.reviews.count == 0
-          "No reviews."
+          "No reviews"
         else
           self.reviews.average(:rating).to_f.round(2)
         end
