@@ -5,7 +5,7 @@
 <tr>
       <th>Restaurant</th>
       <th>Total Reviews</th>
-      <th>Average Rating</th>
+      <th>Average Rating(out of 5 stars)</th>
       <th>City</th>
     </tr>
   </thead>
@@ -14,7 +14,7 @@
       <td style="padding:0 15px 0 15px;"><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
       <td style="padding:0 15px 0 15px;"><%= restaurant.reviews.count %></td>
       <td style="padding:0 15px 0 15px;"><%= restaurant.average_rating %></td>
-      <td style="padding:0 15px 0 15px;"><%= restaurant.neighborhood.name %></td>
+      <td style="padding:0 15px 0 15px;"><%= restaurant.city.name %></td>
     </tr>
     <% end %>
   </tbody>

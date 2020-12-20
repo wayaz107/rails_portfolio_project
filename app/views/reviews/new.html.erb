@@ -1,6 +1,6 @@
 <h1>Add a Restaurant Review</h1>
 
-<%= form_for user_reviews_path do |f| %>
+<%= form_for :review, url: user_reviews_path do |f| %>
     <%= f.label :restaurant, "Choose Restaurant:" %> <br>
     <%= f.collection_select :restaurant_id, Restaurant.order('name ASC'), :id, :name %>
     <br><br>

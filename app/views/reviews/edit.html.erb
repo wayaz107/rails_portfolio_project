@@ -1,6 +1,6 @@
-<h1>Edit Your Review of <%= @restaurant.name %></h1>
+<h1>Edit Your Review of <%= @review.restaurant.name %></h1>
 
-<%= form_for user_reviews_path :method => 'patch' do |f| %>
+<%= form_for :review, url: user_reviews_path, :method => 'patch' do |f| %>
     <%= render partial: 'form', locals: {f: f} %>
     <br><br><br>
     <%= f.submit "Update Review" %>

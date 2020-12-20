@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    include ApplicationHelper
+    
     helper_method :current_user, :logged_in?
 
     def current_user
@@ -22,16 +22,16 @@ class ApplicationController < ActionController::Base
         @user = User.find_by(id: params[:user_id])
     end
 
-    def set_review
-        @review = Review.find(params[:id])
-    end
-
     def set_restaurant
         @restaurant = Restaurant.find(params[:id]) 
     end
 
     def find_restaurant
         @restaurant = Restaurant.find_by(id: params[:restaurant_id])
+    end
+
+    def set_review
+        @review = Review.find(params[:id])
     end
 
 end 
