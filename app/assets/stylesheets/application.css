@@ -14,6 +14,12 @@
  *= require_self
  */
 
+ body {
+  margin: 0;
+  background-color: #ECECEB;
+  font-family: 'Open Sans', sans-serif;
+}
+
  /* ----- NAV BAR ----- */
  .topnav {
     background-color: #428FF4;
@@ -51,14 +57,15 @@
 
   /*--home--*/
 
-  .home {
-    background-color:rgb(150, 137, 137)
-    background-size: cover;
-    height: 800px;
-  }
-  
-  .home h2 {
-    padding-top: 25px;
-    text-align: center;
-    color: black;
-  }
+ /* ----- HOME PAGE ----- */
+.home {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/background.jpg') no-repeat center center;
+  background-size: cover;
+  height: 800px;
+}
+
+.home h2 {
+  padding-top: 25px;
+  text-align: center;
+  color: white;
+}

@@ -6,7 +6,11 @@
   <h1><%= @user.name %>'s Restaurant Reviews</h1>
 <% end %>
 
+<% if @user == current_user %>
+  <button><%= link_to "Add a Review", new_user_review_path(@user) %></button>
+<% end %>
 
+<br><br>
 
 <% @reviews.each do |review| %>
     <%= link_to review.restaurant.name, user_review_path(@user, review) %> <br>
