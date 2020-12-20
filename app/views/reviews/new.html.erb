@@ -4,11 +4,7 @@
     <%= f.label :restaurant, "Choose Restaurant:" %> <br>
     <%= f.collection_select :restaurant_id, Restaurant.order('name ASC'), :id, :name %>
     <br><br>
-    <%= f.label :rating %> <br>
-    <%= f.collection_radio_buttons :rating , [[1, '1-star'] ,[2, '2-stars'],[3, '3-stars'],[4, '4-stars'],[5, '5-stars']], :first, :last %>
-    <br><br>
-    <%= f.label :content, "Comments" %> <br>
-    <%= f.text_area :content %>
+    <%= render partial: 'form', locals: {f: f} %>
     <br><br><br>
     <%= f.submit "Create Review" %>
   <% end %>
