@@ -18,6 +18,9 @@ class ReviewsController < ApplicationController
       end	  
 
     def edit
+        @user = current_user
+        @review = Review.find(params[:id])
+        @restaurant = Restaurant.find(params[:id])
     end 
 
     def review_params
