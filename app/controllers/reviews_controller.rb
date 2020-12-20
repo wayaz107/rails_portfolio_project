@@ -6,6 +6,9 @@ class ReviewsController < ApplicationController
     end	  
 
     def new
+        @user = current_user
+        @restaurant = Restaurant.find_by(id: params[:restaurant_id])
+        @review = Review.new
     end 
 
     def show
