@@ -7,12 +7,12 @@ class ReviewsController < ApplicationController
 
     def new
     end 
-    
+
     def show
         @user = User.find_by(id: params[:user_id])
         @review = Review.find(params[:id])
         @restaurant = Restaurant.find(params[:id])
-      end	  end
+      end	  
 
     def edit
     end 

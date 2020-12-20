@@ -1,4 +1,7 @@
-<h1><%= @user.name %>'s Review of <%= @restaurant.name %></h1>
-
+<% if @user == !current_user %>
+  <h1><%= @user.name %>'s Review of <%= @restaurant.name %></h1>
+<% else %>
+  <h1>My Review of <%= @restaurant.name %></h1>
+<% end %>
 <p><%= @review.content %></p>
 <p><%= @review.rating %>/5</p>
