@@ -13,6 +13,35 @@ class ApplicationController < ActionController::Base
     def require_login
         redirect_to login_path unless logged_in?
     end
+
+    def set_user
+        @user = current_user
+    end
+
+    def find_user
+        @user = User.find_by(id: params[:user_id])
+    end
+
+    def set_review
+        @review = Review.find(params[:id])
+    end
+
+    def set_restaurant
+        @restaurant = Restaurant.find(params[:id]) 
+    end
+
+    def find_restaurant
+        @restaurant = Restaurant.find_by(id: params[:restaurant_id])
+    end
+
+end 
+
+
+
+
+
+
+
+
      
  
-end

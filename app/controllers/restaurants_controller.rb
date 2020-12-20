@@ -13,5 +13,5 @@ private
 
     def restaurant_params
         params.require(:restaurant).permit(:name, :price_range, :address, :cuisine_id, :city_id)
-      end
+    end
 end
