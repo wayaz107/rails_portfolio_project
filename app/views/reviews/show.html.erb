@@ -8,3 +8,15 @@
 
 <p><%= @review.content %></p>
 <p><%= @review.rating %>/5</p>
+
+<br>
+
+<% if @user == current_user %>
+<button><%= link_to "Edit Review", edit_user_review_url %></button>
+<% end %>
+
+<br>
+
+<% if @user == current_user %>
+  <button><%= link_to "Delete Review", user_review_path, :method => 'delete' %></button>
+<% end %>
