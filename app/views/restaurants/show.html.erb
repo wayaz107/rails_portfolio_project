@@ -14,7 +14,7 @@ Restaurant name: <h1> <%= @restaurant.name %>  </h1>
 <% @restaurant.reviews.each do |review| %>
   <b><%= review.user.name %></b>
   <p>Rating: <%= review.rating %>/5</p>
-  <%= review.comment %>
+  <%= review.content %>
 <% end %>
 
 <br>
