@@ -13,6 +13,9 @@ class RestaurantsController < ApplicationController
         @restaurants = Restaurant.highest_rated
     end 
 
+    def popular
+        @restaurants = Restaurant.popular
+    end
  
 private
 

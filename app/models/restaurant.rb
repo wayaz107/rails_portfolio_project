@@ -7,6 +7,9 @@ class Restaurant < ApplicationRecord
 
     scope :highest_rated, -> {joins(:reviews).merge(Review.group(:restaurant_id).order('AVG(rating) DESC').limit(5))}
     
+    scope :popular, -> {joins(:reviews).merge(Review.group(:restaurant_id).order('COUNT(reviews.restaurant_id) DESC').limit(5))}
+
+
     def average_rating
         if self.reviews.count == 0
           "No reviews"

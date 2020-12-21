@@ -5,6 +5,7 @@
 <% else %>
   <%= link_to("My Reviews", user_reviews_path(current_user)) %>
   <%= link_to "Highest Rated Restaurants", highest_rated_path, class: "btn btn-primary btn-lg" %>
+  <%= link_to "Most Reviewed Restaurants", popular_path, class: "btn btn-primary btn-lg" %>
   <%= link_to("All Restaurants", restaurants_path) %>
   <%= link_to("Cuisine", cuisines_path) %>
   <%= link_to("Cities", cities_path) %>

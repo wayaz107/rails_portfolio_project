@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get '/restaurants/highest_rated' => 'restaurants#highest_rated', as: :highest_rated
 
+  get '/restaurants/popular' => 'restaurants#popular', as: :popular
 
   resources :users do
     resources :reviews
