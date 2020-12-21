@@ -20,6 +20,18 @@
       <%= render '/layouts/header' %>
     </div>
 
+    <div id='main' class='container'>
+      <div class='row'>
+        <div class='col-md-8 col-md-offset-2'>
+          <% flash.each do |name, message| %>
+            <div class='alert alert-<%= name %>'>
+              <%= message %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>

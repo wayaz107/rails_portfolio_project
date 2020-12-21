@@ -1,15 +1,8 @@
-
-
 <% if @user == current_user %>
   <h1>My Restaurant Reviews</h1>
 <% else %>
   <h1><%= @user.name %>'s Restaurant Reviews</h1>
 <% end %>
-
-<% @reviews.each do |review| %>
-  <%= link_to review.restaurant.name, user_review_path(@user, review) %> <br>
-  <br>Rating:<%= review.rating %>/5<br><%= review.content %><br></p>
-  <% end %>
 
 <br><br>
 
@@ -17,4 +10,9 @@
   <button type="button" class="btn btn-outline-secondary"><%= link_to "Add a Review", new_user_review_url(@user) %></button>
 <% end %>
 
+<br>
 
+<% @reviews.each do |review| %>
+  <%= link_to review.restaurant.name, user_review_path(@user, review) %> <br>
+  <br>Rating:<%= review.rating %>/5<br><%= review.content %><br></p>
+  <% end %>

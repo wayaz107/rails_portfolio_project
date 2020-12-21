@@ -6,7 +6,7 @@ class RestaurantsController < ApplicationController
     end 
 
     def show
-        @restaurant = Restaurant.find(params[:id])
+       set_restaurant
     end 
 
     def highest_rated

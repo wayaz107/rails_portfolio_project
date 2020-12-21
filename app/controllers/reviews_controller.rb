@@ -1,21 +1,20 @@
 class ReviewsController < ApplicationController
   before_action :require_login
+  before_action :find_user, only: [:index, :show]
+  before_action :set_user, except: [:index, :show]
+  before_action :find_restaurant, only: [:new, :create]
+  before_action :set_review, only: [:show, :edit, :update, :destroy]
 
     def index
-      find_user
       @reviews = @user.reviews.all
     end
   
   
     def new
-      set_user
-      find_restaurant
       @review = Review.new
     end
   
     def create
-      set_user
-      find_restaurant
       @review = @user.reviews.build(review_params)
       if @review.save
         redirect_to user_reviews_path(@user)
@@ -25,30 +24,20 @@ class ReviewsController < ApplicationController
     end
 
     def show
-      find_user
-      set_review
     end
   
     def edit
-      set_user
-      set_review
     end
 
     def update
-    set_user
-    set_review
       if @review.update(review_params)
       redirect_to user_reviews_path(@user)
       else
       render :edit
       end
     end
-     
-
-  
+       
     def destroy
-      set_user
-      set_review
       @review.destroy
       redirect_to user_reviews_path(@user)
     end

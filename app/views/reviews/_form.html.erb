@@ -3,3 +3,17 @@
 <br><br>
 <legend><%= f.label :content, "Comments" %> </legend><br>
 <%= f.text_area :content %>
+
+
+<div class="errors">
+  <% if @review.errors.any? %>
+    <br><br>
+    <h2>Errors:</h2>
+    <ul>
+      <% @review.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+

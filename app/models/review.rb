@@ -5,5 +5,5 @@ class Review < ApplicationRecord
     validates :restaurant, presence: true
     validates :rating, presence: true
     validates :content, presence: true
-    validates_uniqueness_of :restaurant_id, :scope => :user_id
+    validates_uniqueness_of :restaurant_id, :scope => :user_id, message: "has already been reviewed."
 end
