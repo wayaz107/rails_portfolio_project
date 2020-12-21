@@ -10,7 +10,7 @@
 </tr>
 </thead>
 <tbody>
-<% @city.restaurants.each do |restaurant| %>
+<% @city.restaurants.sort_by(&:name).each do |restaurant| %>
 <td style="padding:0 15px 0 15px;"><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
 <td style="padding:0 15px 0 15px;"><%= restaurant.reviews.count %></td>
 <td style="padding:0 15px 0 15px;"><%= restaurant.average_rating %></td>

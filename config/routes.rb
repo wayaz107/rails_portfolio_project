@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get '/restaurants/popular' => 'restaurants#popular', as: :popular
 
-  resources :users do
+  resources :users, except: :show do
     resources :reviews
   end
 

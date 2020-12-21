@@ -11,6 +11,6 @@
 <br>
 
 <% if @user == current_user %>
-  <%= link_to "Edit Review", edit_user_review_url, class: "btn btn-outline-warning" %>
-  <%= link_to "Delete Review", user_review_path, class: "btn btn-outline-danger", :method => 'delete' %>
+  <%= link_to "Edit Review", edit_user_review_path, class: "btn btn-outline-warning" %>
+  <%= button_to "Delete Review", user_review_path, :method => 'delete', class: "btn btn-outline-danger" %>
 <% end %>
