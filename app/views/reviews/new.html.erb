@@ -4,6 +4,7 @@
     <%= f.label :restaurant, "Choose Restaurant:" %> <br>
     <%= f.collection_select :restaurant_id, Restaurant.order('name ASC'), :id, :name %>
     <br><br>
+
     <%= render partial: 'form', locals: {f: f} %>
     <br><br><br>
     <%= f.submit "Create Review" %>

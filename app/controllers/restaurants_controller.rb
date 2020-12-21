@@ -1,11 +1,16 @@
 class RestaurantsController < ApplicationController
-   
-    def index
+   before_action :require_login
+    
+   def index
        @restaurants = Restaurant.order('name ASC')
     end 
 
     def show
         @restaurant = Restaurant.find(params[:id])
+    end 
+
+    def highest_rated
+        @restaurants = Restaurant.highest_rated
     end 
 
  

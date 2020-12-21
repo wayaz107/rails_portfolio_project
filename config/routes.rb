@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   get '/logout' => 'sessions#destroy'
 
+  get '/restaurants/highest_rated' => 'restaurants#highest_rated', as: :highest_rated
+
+
   resources :users do
     resources :reviews
   end

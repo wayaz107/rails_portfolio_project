@@ -2,20 +2,15 @@
 
 <h1>My Review of <%= @review.restaurant.name %></h1>
 <% else %>
-<h1><%= @user.name %>'s Review of <%= @review.restaurant.name %></h1>
+<h1><%= @user.name %>'s Review of <%= @review.restaurant.name %></h1><br>
 <% end %>
 
-<p><%= @review.content %></p>
-<p><%= @review.rating %>/5</p>
+<p class="lead"><%= @review.content %></p>
+<p class="lead"><%= @review.rating %>/5</p>
 
 <br>
 
 <% if @user == current_user %>
-<button><%= link_to "Edit Review", edit_user_review_url %></button>
-<% end %>
-
-<br>
-
-<% if @user == current_user %>
-  <button><%= link_to "Delete Review", user_review_path, :method => 'delete' %></button>
+<button type="button" class="btn btn-outline-warning"><%= link_to "Edit Review", edit_user_review_url %></button><br>
+<button type="button" class="btn btn-outline-danger"><%= link_to "Delete Review", user_review_path, :method => 'delete' %></button>
 <% end %>

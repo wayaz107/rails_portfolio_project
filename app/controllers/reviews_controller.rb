@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
-
+  before_action :require_login
+  
     def index
       find_user
       @reviews = @user.reviews.all

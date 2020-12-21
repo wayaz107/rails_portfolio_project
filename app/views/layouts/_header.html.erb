@@ -4,9 +4,10 @@
   <%= link_to("Sign Up", signup_path) %>
 <% else %>
   <%= link_to("My Reviews", user_reviews_path(current_user)) %>
+  <%= link_to "Highest Rated Restaurants", highest_rated_path, class: "btn btn-primary btn-lg" %>
   <%= link_to("All Restaurants", restaurants_path) %>
-  <%= link_to("Restaurants by Cuisine", cuisines_path) %>
-  <%= link_to("Restaurants by City", cities_path) %>
+  <%= link_to("Cuisine", cuisines_path) %>
+  <%= link_to("Cities", cities_path) %>
   <%= link_to("Reviewers", users_path) %>
   <%= link_to("Log Out", logout_path) %>
 <% end %>
