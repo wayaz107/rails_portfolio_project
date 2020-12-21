@@ -1,5 +1,5 @@
-<%= f.label :rating %> <br>
+<legend><%= f.label :rating %></legend> <br>
 <%= f.collection_radio_buttons :rating , [[1, '1-star'] ,[2, '2-stars'],[3, '3-stars'],[4, '4-stars'],[5, '5-stars']], :first, :last %>
 <br><br>
-<%= f.label :content, "Comments" %> <br>
+<legend><%= f.label :content, "Comments" %> </legend><br>
 <%= f.text_area :content %>

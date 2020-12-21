@@ -1,5 +1,6 @@
 <h1>Reviewers</h1>
 
 <% @users.each do |user| %>
-    <%= link_to user.name, user_reviews_path(user) %> <br>
-  <% end %>
+   <h3> <%= link_to user.name, user_reviews_path(user) %></h3><br>
+   <br><%= user.reviews.count %> Reviews</p>
+   <% end %>

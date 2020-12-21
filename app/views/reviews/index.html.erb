@@ -8,7 +8,8 @@
 
 <% @reviews.each do |review| %>
   <%= link_to review.restaurant.name, user_review_path(@user, review) %> <br>
-<% end %>
+  <br>Rating:<%= review.rating %>/5<br><%= review.content %><br></p>
+  <% end %>
 
 <br><br>
 

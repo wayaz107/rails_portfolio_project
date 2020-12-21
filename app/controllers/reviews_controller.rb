@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :require_login
-  
+
     def index
       find_user
       @reviews = @user.reviews.all
@@ -26,20 +26,17 @@ class ReviewsController < ApplicationController
 
     def show
       find_user
-      set_restaurant
       set_review
     end
   
     def edit
       set_user
       set_review
-      set_restaurant
     end
 
     def update
-      set_user
+    set_user
     set_review
-    set_restaurant
       if @review.update(review_params)
       redirect_to user_reviews_path(@user)
       else

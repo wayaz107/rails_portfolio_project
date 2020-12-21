@@ -2,5 +2,6 @@
 
 
 <% @cuisines.each do |cuisine| %>
-    <%= link_to cuisine.name, cuisine_path(cuisine) %> <br>
+   <h3> <%= link_to cuisine.name, cuisine_path(cuisine) %></h3> <br>
+   <%= cuisine.restaurants.count %> Restaurants</p>
   <% end %>
