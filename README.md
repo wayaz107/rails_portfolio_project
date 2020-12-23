@@ -1,24 +1,27 @@
-# README
+Rails App Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Overview
 
-Things you may want to cover:
+Welcome to the Restaurant Reviews App. You can Create,Read,Update, and Delete reviews of restaurants that you visited. You can see the highest rated restaurant and view restaurants by cities and cuisines. 
 
-* Ruby version
+Installation
 
-* System dependencies
+1.Fork and clone this repository, and then within the main directory execute
 
-* Configuration
+bundle install
 
-* Database creation
+2.Then run:
 
-* Database initialization
+rails s
 
-* How to run the test suite
+3.Open up a new browser tab and navigate to:
 
-* Services (job queues, cache servers, search engines, etc.)
+http://localhost:3000
 
-* Deployment instructions
+4.Press ctrl+C to shut it down
 
-* ...
+Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/wayaz107/rails_portfolio_project. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+
+License
+The gem is available as open source under the terms of the MIT License https://opensource.org/licenses/MIT
