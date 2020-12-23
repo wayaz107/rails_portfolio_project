@@ -2,7 +2,7 @@ Rails App Project
 
 Overview
 
-Welcome to the Restaurant Reviews App. You can Create,Read,Update, and Delete reviews of restaurants that you visited. You can see the highest rated restaurant and view restaurants by cities and cuisines. 
+Welcome to the Restaurant Reviews App. You can Create, Read, Update and Delete reviews of restaurants that you visited. You can see the highest rated restaurant and view restaurants by cities and cuisines. 
 
 Installation
 
