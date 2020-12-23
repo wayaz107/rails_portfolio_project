@@ -21,7 +21,7 @@ http://localhost:3000
 4.Press ctrl+C to shut it down
 
 Contributing
-Bug reports and pull requests are welcome on GitHub at https://github.com/wayaz107/rails_portfolio_project. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/wayaz107/rails_portfolio_project. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct https://github.com/wayaz107/rails_portfolio_project/blob/main/CONTRIBUTING.md
 
 License
 The gem is available as open source under the terms of the MIT License https://opensource.org/licenses/MIT
