@@ -1,6 +1,7 @@
 <h1>Most Reviewed Restaurants</h1>
 <br><br>
 <% @restaurants.each do |restaurant| %>
-  <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3> <h4><%= restaurant.reviews.count %> reviews</h4><br><br>
+  <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3> 
+  <h4><%= restaurant.reviews.count %> reviews</h4><br><br>
 <% end %>
 
