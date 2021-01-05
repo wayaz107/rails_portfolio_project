@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
-  resources :restaurants, only: [:index, :show, :new, :create]
+  resources :restaurants, only: [:index, :show]
   resources :cuisines, only: [:index, :show]
   resources :cities, only: [:index, :show]
   

@@ -10,15 +10,17 @@
   <button type="button" class="btn btn-outline-secondary"><%= link_to "Add a Review", new_user_review_url(@user) %></button>
 <% end %>
 
-<br>
+<br><br>
 
 <% @reviews.each do |review| %>
   <% if @user == current_user %>
-  <%= link_to review.restaurant.name, user_review_path(@user, review) %> <br>
-  <br>Rating:<%= review.rating %>/5<br><%= review.content %><br></p>
+  <%= link_to review.restaurant.name, user_review_path(@user, review) %><br>
+  <br>Rating: <%= review.rating %>/5<br>
+  <%= review.content %><br></p>
    <% else %>
   <strong><h3><p class="lead"><%= review.restaurant.name %></p></h3></strong>
-  <p class="lead">Rating: <%= review.rating %>/5<br><%= review.content %></p>
+  <p class="lead">Rating: <%= review.rating %>/5<br>
+  <%= review.content %></p>
   <br><br>
    <% end %>
   <% end %>
