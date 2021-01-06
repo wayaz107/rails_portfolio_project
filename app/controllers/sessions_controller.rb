@@ -4,22 +4,15 @@ class SessionsController < ApplicationController
     end 
 
     def create
-
-        if params[:provider] == 'facebook'
-            @user = User.create_by_facebook_omniauth(auth)
-            session[:user_id] = @user.id
-            redirect_to root_path(@user)
-        else
-
         @user = User.find_by(email: params[:user][:email])
-
-        if @user && @user.try(:authenticate, params[:user][:password])
-            session[:user_id] = @user.id
-            redirect_to root_path
-        else
-            redirect_to login_path, danger: "Incorrect username/password. Please try again."
-          end 
-        end 
+         if params[:user][:email].empty? || params[:user][:password].empty?
+            redirect_to login_path, danger: "Please complete all fields."
+         elsif @user && @user.authenticate(params[:user][:password])
+           session[:user_id] = @user.id
+           redirect_to root_path
+         else
+           redirect_to login_path, danger: "Incorrect username/password. Please try again."
+        end  
     end 
 
     def destroy

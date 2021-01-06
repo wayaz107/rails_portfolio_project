@@ -3,6 +3,7 @@ class Restaurant < ApplicationRecord
     has_many :users, through: :reviews
     belongs_to :city
     belongs_to :cuisine
+    
     validates :name, presence: true, uniqueness: true
 
     scope :highest_rated, -> {joins(:reviews).merge(Review.group(:restaurant_id).order('AVG(rating) DESC').limit(5))}

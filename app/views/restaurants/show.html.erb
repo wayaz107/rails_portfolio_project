@@ -1,24 +1,21 @@
-<h1><%= @restaurant.name %>
+<h1><b><%= @restaurant.name %></b><br>
 <% if !Review.exists?(user_id: current_user.id, restaurant_id: @restaurant.id) %>
   <%= link_to "Write a Review", new_user_review_path(:user_id => current_user.id, :restaurant_id => @restaurant.id), class: "btn btn-outline-info" %><br><br><br>
-<% end %></h1><br>
-
-<h3>Cuisine: <%= @restaurant.cuisine.name %>
+<% end %></h1>
 <br>
- Address: <h2> <%= @restaurant.address %>  </h2>
- Price range: <h2> <%= @restaurant.price_range %>  </h1>
- <h3>City: <%= @restaurant.city.name %>
+<h3>Cuisine: <%= @restaurant.cuisine.name %></h3><br>
+<h3>Address: <h2> <%= @restaurant.address %> </h3><br>
+<h3>Price range: <h2> <%= @restaurant.price_range %></h3><br>
+<h3>City: <%= @restaurant.city.name %></h3><br>
 
-<br>
+<h3>Total Reviews: <%= @restaurant.reviews.count %></h3><br>
+<h3>Average Rating: <%= @restaurant.average_rating %></h3><br>
 
-<h4>Total Reviews: <%= @restaurant.reviews.count %><br></h4>
-<h4>Average Rating: <%= @restaurant.average_rating %><br></h4>
-<br>
-
+<br><br>
 <% @restaurant.reviews.each do |review| %>
-  <b><%= review.user.name %></b>
-  <p>Rating: <%= review.rating %>/5</p>
-  <%= review.content %>
+  <h3><b><%= review.user.name %></b></h3>
+  <h4><p>Rating: <%= review.rating %>/5</p></h4>
+  <h4><%= review.content %></h4>
 <% end %>
 
 <br>
