@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+
   before_action :require_login
   before_action :find_user, only: [:index, :show]
   before_action :set_user, except: [:index, :show]

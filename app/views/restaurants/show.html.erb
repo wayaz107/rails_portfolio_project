@@ -3,11 +3,11 @@
   <%= link_to "Write a Review", new_user_review_path(:user_id => current_user.id, :restaurant_id => @restaurant.id), class: "btn btn-outline-info" %><br><br><br>
 <% end %></h1>
 <br>
-<h3>Cuisine: <%= @restaurant.cuisine.name %></h3><br>
-<h3>Address: <h2> <%= @restaurant.address %> </h3><br>
-<h3>Price range: <h2> <%= @restaurant.price_range %></h3><br>
-<h3>City: <%= @restaurant.city.name %></h3><br>
-
+<h3><u>Cuisine:</u> <%= @restaurant.cuisine.name %></h3><br>
+<h3><u>Address:</u>  <h2> <%= @restaurant.address %> </h3><br>
+<h3><u>Price range:</u> <h2> <%= @restaurant.price_range %></h3><br>
+<h3><u>City:</u>  <%= @restaurant.city.name %></h3><br>
+<br>
 <h3>Total Reviews: <%= @restaurant.reviews.count %></h3><br>
 <h3>Average Rating: <%= @restaurant.average_rating %></h3><br>
 

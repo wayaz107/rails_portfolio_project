@@ -4,6 +4,6 @@
   <h3><%= link_to restaurant.name, restaurant_path(restaurant) %> </h3> 
   <h4>Cuisine: <%= link_to restaurant.cuisine.name, cuisine_path(restaurant.cuisine) %></h4>
   <h4>City: <%= link_to restaurant.city.name, city_path(restaurant.city) %></h4>
-  <h4><%= restaurant.average_rating %>average rating</h4><br>
+  <h4><%= restaurant.average_rating %> average rating</h4><br>
 <% end %>
 
